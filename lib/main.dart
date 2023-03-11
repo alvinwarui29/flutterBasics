@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:spending_tracker/widgets/user_transaction.dart';
+import 'widgets/new_transaction.dart';
 import 'models/transaction.dart';
 import 'widgets/transaction_list.dart';
 
@@ -43,33 +45,7 @@ class MyHomePage extends StatelessWidget {
               elevation: 50,
             ),
           ),
-          Card(
-              elevation: 5,
-              child: Container(
-                padding: EdgeInsets.all(10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: <Widget>[
-                    TextField(
-                      decoration: InputDecoration(labelText: "Title"),
-                      // onChanged: (val) => inputTitle = val,
-                      controller: titleController,
-                    ),
-                    TextField(
-                      decoration: InputDecoration(labelText: "Amount"),
-                      //onChanged: (val) => inputAmount = val
-                      controller: amountController,
-                    ),
-                    TextButton(
-                        onPressed: () {
-                          print(amountController.text);
-                          print(titleController.text);
-                        },
-                        child: Text("Add Transaction"))
-                  ],
-                ),
-              )),
-          TransactionListState(),
+          User_transaction(),
         ],
       ),
     );
