@@ -34,19 +34,21 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Hello Flutter"),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            child: Card(
-              child: Text("Chart Sections"),
-              color: Colors.pink,
-              elevation: 50,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              child: Card(
+                child: Text("Chart Sections"),
+                color: Colors.pink,
+                elevation: 50,
+              ),
             ),
-          ),
-          User_transaction(),
-        ],
+            User_transaction(),
+          ],
+        ),
       ),
     );
   }
